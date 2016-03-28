@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Load Page Dynamically inside a jQuery UI Dialog</title>
+    <link rel="Stylesheet" type="text/css" href="
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css
+" />
+    <script  type="text/javascript" src="
+http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js">
+    </script>
+    <script type="text/javascript" src="
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js">
+    </script>
+
+    <script type="text/javascript">
+        $(function ()    {
+            $('<div>').dialog({
+                modal: true,
+                open: function ()
+                {
+                    $(this).load('Sample.htm');
+                },
+                height: 400,
+                width: 400,
+                title: 'Dynamically Loaded Page'
+            });
+        });
+    </script>
+</head>
+<body>

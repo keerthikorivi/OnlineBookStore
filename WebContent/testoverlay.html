@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #page {
+            margin-left: 200px;
+        }
+        #maincontent {
+            float: right;
+            width: 100%;
+            background-color: #F0F0F0;
+        }
+        #menuleftcontent{
+            float: left;
+            width: 200px;
+            margin-left: -200px;
+            background-color: #CCCCCC;
+        }
+        #clearingdiv {
+            clear: both;
+        }
+
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+        $(function () {
+            $("#firstcontent").on("click", function () {
+                $("#maincontent").load($this.attribute(href));
+            });
+            $("#secondcontent").on("click", function () {
+                $("#maincontent").load("PageB.html");
+            });
+            return false;
+        });
+    </script>
+</head>
+<body>
+<div id="page">
+    <div id="maincontent">
+ hello!!!!!!
+    </div>
+    <div id="menuleftcontent">
+        <ul id="menu">
+            <li><a href="PageA.html" class="firstcontent">first</a></li>
+            <li><a href="PageB.html" class="secondcontent">second</a></li>
+        </ul>
+    </div>
+    <div id="clearingdiv"></div>
+</div>
+</body>
+</html>
